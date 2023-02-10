@@ -176,8 +176,47 @@ body {
   cursor: pointer;
 }
 
+.post .conteudo {
+  position: relative;
+}
 .post .conteudo img {
   width: 100%;
+  
+}
+
+.post .conteudo .heartclicked {
+  font-size: 5px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  animation-name: none;
+  display: none;
+}
+
+.post .conteudo .heartclicked.animacao {
+  animation-duration: 0.3s;
+  animation-name: like;
+  display: block;
+  font-size: 160px;
+  
+}
+
+@keyframes like {
+
+  from{
+    font-size: 32px;
+    opacity: 1;
+  }
+
+  to {
+    font-size: 160px;
+    opacity: 1;
+  }
+
+
 }
 
 .post .fundo .acoes {
@@ -185,6 +224,7 @@ body {
   justify-content: space-between;
   padding: 13px 16px;
   font-size: 24px;
+
 }
 
 .post .fundo .acoes div:first-child ion-icon {
@@ -194,6 +234,8 @@ body {
 .post .fundo .acoes  .heart{
   color: red;
 }
+
+
 
 .post .fundo .curtidas {
   display: flex;

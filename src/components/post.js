@@ -5,6 +5,7 @@ export default function Post(props) {
     const [icone, setIcone] = useState("bookmark-outline")
     const [like, setLike] = useState("heart-outline")
     const [qtdlikes, setqtdlikes] = useState(props.Ncurtidas)
+    const [animacao, setanimacao] = useState("")
 
     function mudaricone(info){
         
@@ -27,8 +28,19 @@ export default function Post(props) {
         } else {
             setLike("heart-outline")
             setqtdlikes(qtdlikes-1)
+            setanimacao("");
 
         }
+    }
+
+    function clickImagem(){
+        mudarLike("heart-outline")
+
+        setanimacao("animacao");
+
+        setTimeout(() => {
+            setanimacao("");
+        }, 500);
     }
 
     return <>
@@ -44,7 +56,8 @@ export default function Post(props) {
             </div>
 
             <div class="conteudo">
-                <img data-test="post-image" src={props.imagem} alt={props.altimagem} onClick={()=> mudarLike("heart-outline")}/>
+                <img data-test="post-image" src={props.imagem} alt={props.altimagem} onDoubleClick={()=> clickImagem()}/>
+                <ion-icon name="heart" class={`heartclicked ${animacao}`}></ion-icon>
             </div>
 
             <div class="fundo">
