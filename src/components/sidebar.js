@@ -1,9 +1,14 @@
 import Usuario from "./usuario.js"
 import Sugestoes from "./sugestoes.js"
+import { useState } from "react";
 
 export default function Sidebar(){
 
+
     let arr = [{imagem:"./assets/img/catanacomics.svg", alt:"imagem de perfil", nomeUsuario:"catanacomics"}];
+
+
+
 
     return <>
     <div class="sidebar">

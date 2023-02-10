@@ -191,6 +191,10 @@ body {
   margin-right: 6px;
 }
 
+.post .fundo .acoes  .heart{
+  color: red;
+}
+
 .post .fundo .curtidas {
   display: flex;
   align-items: center;
