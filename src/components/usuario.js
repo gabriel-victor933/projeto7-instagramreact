@@ -7,7 +7,11 @@ export default function Usuario(props){
 
     function mudarNome(){
         const newnome = prompt("Qual o seu nome?")
-        setNome(newnome)
+
+        if(newnome != ""){
+            setNome(newnome)
+        }
+        
     }
 
     function mudarFoto(){
