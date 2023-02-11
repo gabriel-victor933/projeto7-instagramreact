@@ -11,9 +11,9 @@ export default function Posts() {
 
     return <>
 
-        <div class="posts">
+        <div className="posts">
 
-            {arr.map(Post)}
+            {arr.map((p,index) => <Post key={index} imagemUsuario={p.imagemUsuario} nomeUsuario={p.nomeUsuario} imagem={p.imagem} altimagem={p.altimagem} imagemQuemCurtiu={p.imagemQuemCurtiu} quemCurtiu={p.quemCurtiu} Ncurtidas={p.Ncurtidas}/>)}
 
         </div>
 

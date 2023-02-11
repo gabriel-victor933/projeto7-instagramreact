@@ -10,13 +10,13 @@ export default function Sugestoes(){
         {imagem: "assets/img/smallcutecats.svg",alt: "smallcutecats",nome: "smallcutecats",razao: "Segue você" }
     ]
     return <>
-    <div class="sugestoes">
-                        <div class="titulo">
+    <div className="sugestoes">
+                        <div className="titulo">
                             Sugestões para você
                             <div>Ver tudo</div>
                         </div>
 
-                        {arr.map(Sugestao)}
+                        {arr.map((p) => <Sugestao key={p.nome} imagem={p.imagem} alt={p.alt} nome={p.nome} razao={p.razao}/>)}
 
                     </div></>
 }

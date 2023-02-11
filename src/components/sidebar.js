@@ -11,17 +11,17 @@ export default function Sidebar(){
 
 
     return <>
-    <div class="sidebar">
-                    {arr.map(Usuario)}
+    <div className="sidebar">
+                    {arr.map((p)=> <Usuario key ="usuario" imagem={p.imagem} nomeUsuario={p.nomeUsuario}/>)}
                     
                     <Sugestoes />
           
-                    <div class="links">
+                    <div className="links">
                         Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes •
                         Hashtags • Idioma
                     </div>
 
-                    <div class="copyright">
+                    <div className="copyright">
                         © 2021 INSTAGRAM DO FACEBOOK
                     </div>
                 </div>

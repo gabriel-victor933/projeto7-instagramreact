@@ -8,7 +8,7 @@ export default function Usuario(props){
     function mudarNome(){
         const newnome = prompt("Qual o seu nome?")
 
-        if(newnome != ""){
+        if(newnome != "" && newnome != undefined){
             setNome(newnome)
         }
         
@@ -17,7 +17,7 @@ export default function Usuario(props){
     function mudarFoto(){
         const newfoto = prompt("Qual o link da nova foto?")
 
-        if(newfoto != ""){
+        if(newfoto != "" && newfoto != undefined){
             setFoto(newfoto);
         }
         
@@ -25,9 +25,9 @@ export default function Usuario(props){
 
 
     return <>
-        <div class="usuario">
+        <div className="usuario">
                         <img  data-test="profile-image" src={foto} alt={nome} onClick={mudarFoto}/>
-                        <div class="texto">
+                        <div className="texto">
                             <span>
                                 <strong data-test="name" >{nome}</strong>
                                 <ion-icon data-test="edit-name" name="pencil" onClick={mudarNome}></ion-icon>
